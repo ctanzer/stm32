@@ -7,7 +7,7 @@
 #-------------------------------------------------------------------------------
 
 # program-name
-PROGRAM = timer
+PROGRAM = template
 
 # compiler-variables
 CC = arm-none-eabi-gcc
