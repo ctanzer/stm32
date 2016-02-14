@@ -16,8 +16,9 @@ LDFLAGS = -mcpu=cortex-m4 -mthumb -g -nostartfiles -Wl,-Map=$(PROGRAM).map -O0 -
 
 # files and filepaths - relative to projectfolder
 # works only if folder is places in ~/Desktop/git/stm32
+# need a copy of system_stm32f4xx.c in the project folder cause clock-settings are done in there
 INCLUDEDIRS = -I../../../utils/STM32F4xx_StdPeriph/inc -I../../../utils/cmsis/Include -I../../../utils/cmsis_boot/
-CFILES = ../../../utils/STM32F4xx_StdPeriph/src/stm32f4xx_syscfg.c ../../../utils/cmsis_boot/system_stm32f4xx.c ../main.c ../../../utils/cmsis_boot/startup/startup_stm32f4xx.c ../../../utils/STM32F4xx_StdPeriph/src/stm32f4xx_rcc.c ../../../utils/STM32F4xx_StdPeriph/src/stm32f4xx_gpio.c
+CFILES = ../../../utils/STM32F4xx_StdPeriph/src/stm32f4xx_syscfg.c ../system_stm32f4xx.c ../main.c ../../../utils/cmsis_boot/startup/startup_stm32f4xx.c ../../../utils/STM32F4xx_StdPeriph/src/stm32f4xx_rcc.c ../../../utils/STM32F4xx_StdPeriph/src/stm32f4xx_gpio.c
 OBJFILES = ../obj/main.o ../obj/startup_stm32f4xx.o ../obj/stm32f4xx_syscfg.o ../obj/system_stm32f4xx.o ../obj/stm32f4xx_rcc.o ../obj/stm32f4xx_gpio.o
 
 .PHONY: clean, all, main, flash
