@@ -19,5 +19,11 @@ int main(int argc, char const *argv[]) {
 	GPIO_Init(GPIOD, &GPIO_initStruct);
 	}
 
+  while (1) {
+    int i = 0;
+    while(5000000 > i++);
+    GPIOD->ODR ^= GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+  }
+
   return 0;
 }
