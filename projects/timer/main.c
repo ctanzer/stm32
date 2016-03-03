@@ -49,13 +49,13 @@ int main(int argc, char const *argv[]) {
 
   while (1) {
     wait_delay(6000);
-    TOGGLE_GPIOD(GPIO_Pin_15);
+    TOGGLE_GPIOD(GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15);
     wait_delay(2500);
-    TOGGLE_GPIOD(GPIO_Pin_15);
+    TOGGLE_GPIOD(GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15);
     wait_delay(2500);
-    TOGGLE_GPIOD(GPIO_Pin_15);
+    TOGGLE_GPIOD(GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15);
     wait_delay(2500);
-    TOGGLE_GPIOD(GPIO_Pin_15);
+    TOGGLE_GPIOD(GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15);
   }
 
   return 0;
