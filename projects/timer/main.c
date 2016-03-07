@@ -8,6 +8,10 @@
 #include "main.h"
 
 #define TOGGLE_GPIOD(x) GPIOD->ODR ^= x
+#define GREEN_LED GPIO_Pin_12
+#define ORANGE_LED GPIO_Pin_13
+#define RED_LED GPIO_Pin_14
+#define BLUE_LED GPIO_Pin_15
 
 void wait_delay(volatile int);
 
@@ -21,7 +25,7 @@ int main(int argc, char const *argv[]) {
   TIM_TimeBaseInitTypeDef TIM_timebaseStruct;
   NVIC_InitTypeDef NVIC_initStruct;
 
-  GPIO_initStruct.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+  GPIO_initStruct.GPIO_Pin = GREEN_LED | ORANGE_LED | RED_LED | BLUE_LED;
   GPIO_initStruct.GPIO_Mode = GPIO_Mode_OUT;
   GPIO_initStruct.GPIO_OType = GPIO_OType_PP;
   GPIO_initStruct.GPIO_PuPd = GPIO_PuPd_UP;
@@ -49,13 +53,13 @@ int main(int argc, char const *argv[]) {
 
   while (1) {
     wait_delay(6000);
-    TOGGLE_GPIOD(GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15);
+    TOGGLE_GPIOD(ORANGE_LED | RED_LED | BLUE_LED);
     wait_delay(2500);
-    TOGGLE_GPIOD(GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15);
+    TOGGLE_GPIOD(ORANGE_LED | RED_LED | BLUE_LED);
     wait_delay(2500);
-    TOGGLE_GPIOD(GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15);
+    TOGGLE_GPIOD(ORANGE_LED | RED_LED | BLUE_LED);
     wait_delay(2500);
-    TOGGLE_GPIOD(GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15);
+    TOGGLE_GPIOD(ORANGE_LED | RED_LED | BLUE_LED);
   }
 
   return 0;

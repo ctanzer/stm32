@@ -704,15 +704,15 @@ OUTPUT(timer.elf elf32-littlearm)
  .debug_ranges  0x00000518       0x30 ../obj/misc.o
  .debug_ranges  0x00000548       0x58 ../obj/stm32f4xx_it.o
 
-.debug_line     0x00000000     0x1bc3
- .debug_line    0x00000000      0x20e ../obj/main.o
- .debug_line    0x0000020e       0x88 ../obj/startup_stm32f4xx.o
- .debug_line    0x00000296      0x1db ../obj/system_stm32f4xx.o
- .debug_line    0x00000471      0x576 ../obj/stm32f4xx_rcc.o
- .debug_line    0x000009e7      0x331 ../obj/stm32f4xx_gpio.o
- .debug_line    0x00000d18      0xa92 ../obj/stm32f4xx_tim.o
- .debug_line    0x000017aa      0x20f ../obj/misc.o
- .debug_line    0x000019b9      0x20a ../obj/stm32f4xx_it.o
+.debug_line     0x00000000     0x1bc4
+ .debug_line    0x00000000      0x20f ../obj/main.o
+ .debug_line    0x0000020f       0x88 ../obj/startup_stm32f4xx.o
+ .debug_line    0x00000297      0x1db ../obj/system_stm32f4xx.o
+ .debug_line    0x00000472      0x576 ../obj/stm32f4xx_rcc.o
+ .debug_line    0x000009e8      0x331 ../obj/stm32f4xx_gpio.o
+ .debug_line    0x00000d19      0xa92 ../obj/stm32f4xx_tim.o
+ .debug_line    0x000017ab      0x20f ../obj/misc.o
+ .debug_line    0x000019ba      0x20a ../obj/stm32f4xx_it.o
 
 .debug_str      0x00000000     0x1fc6
  .debug_str     0x00000000      0xa01 ../obj/main.o
