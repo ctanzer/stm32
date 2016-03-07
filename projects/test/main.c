@@ -16,7 +16,7 @@ int main(int argc, char const *argv[]) {
 
 	GPIO_InitTypeDef GPIO_initStruct;
 
-	GPIO_initStruct.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+	GPIO_initStruct.GPIO_Pin = GREEN_LED | ORANGE_LED | RED_LED | BLUE_LED;
 	GPIO_initStruct.GPIO_Mode = GPIO_Mode_OUT;
 	GPIO_initStruct.GPIO_OType = GPIO_OType_PP;
 	GPIO_initStruct.GPIO_PuPd = GPIO_PuPd_UP;
