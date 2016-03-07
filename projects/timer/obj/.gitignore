@@ -1,3 +1,2 @@
-# git ignore list
-
-*.o # ignore object files
+# Compiled Files
+*.o
