@@ -448,12 +448,12 @@ OUTPUT(template.elf elf32-littlearm)
  .debug_ranges  0x00000048      0x168 ../obj/stm32f4xx_rcc.o
  .debug_ranges  0x000001b0       0x78 ../obj/stm32f4xx_gpio.o
 
-.debug_line     0x00000000      0xcae
- .debug_line    0x00000000      0x1a4 ../obj/main.o
- .debug_line    0x000001a4       0x88 ../obj/startup_stm32f4xx.o
- .debug_line    0x0000022c      0x1db ../obj/system_stm32f4xx.o
- .debug_line    0x00000407      0x576 ../obj/stm32f4xx_rcc.o
- .debug_line    0x0000097d      0x331 ../obj/stm32f4xx_gpio.o
+.debug_line     0x00000000      0xcb0
+ .debug_line    0x00000000      0x1a6 ../obj/main.o
+ .debug_line    0x000001a6       0x88 ../obj/startup_stm32f4xx.o
+ .debug_line    0x0000022e      0x1db ../obj/system_stm32f4xx.o
+ .debug_line    0x00000409      0x576 ../obj/stm32f4xx_rcc.o
+ .debug_line    0x0000097f      0x331 ../obj/stm32f4xx_gpio.o
 
 .debug_str      0x00000000      0xca3
  .debug_str     0x00000000      0x2f6 ../obj/main.o

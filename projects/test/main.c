@@ -28,7 +28,7 @@ int main(int argc, char const *argv[]) {
   while (1) {
     int i = 0;
     while(5000000 > i++);
-    TOGGLE_GPIOD(GREEN_LED | ORANGE_LED | RED_LED | BLUE_LED)
+    TOGGLE_GPIOD(GREEN_LED | ORANGE_LED | RED_LED | BLUE_LED);
   }
 
   return 0;

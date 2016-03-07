@@ -24,10 +24,11 @@ OBJFILES = ../obj/main.o ../obj/startup_stm32f4xx.o ../obj/stm32f4xx_syscfg.o ..
 .PHONY: clean, all, main, flash
 
 clean:
-	del .\obj\*.o
-	del .\bin\*.elf
-	del .\bin\*.hex
-	del .\bin\*.map
+	rm -rf ./obj/*.o
+	rm -rf ./bin/*.elf
+	rm -rf ./bin/*.hex
+	rm -rf ./bin/*.bin
+	rm -rf ./bin/*.map
 
 all: clean main flash
 
