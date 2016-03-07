@@ -2,6 +2,12 @@
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_gpio.h"
 
+#define TOGGLE_GPIOD(x) GPIOD->ODR ^= x
+#define GREEN_LED GPIO_Pin_12
+#define ORANGE_LED GPIO_Pin_13
+#define RED_LED GPIO_Pin_14
+#define BLUE_LED GPIO_Pin_15
+
 int main(int argc, char const *argv[]) {
   SystemInit();
 
@@ -22,7 +28,7 @@ int main(int argc, char const *argv[]) {
   while (1) {
     int i = 0;
     while(5000000 > i++);
-    GPIOD->ODR ^= GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+    TOGGLE_GPIOD(GREEN_LED | ORANGE_LED | RED_LED | BLUE_LED)
   }
 
   return 0;
